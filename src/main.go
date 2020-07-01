@@ -140,9 +140,9 @@ func handleData(b []byte) {
 	ry := float32(bytes_to_int32(b[2:5])) / 32768.0
 	rx := float32(bytes_to_int32(b[5:8])) / 32768.0
 	rz := float32(bytes_to_int32(b[8:11])) / 32768.0
-	tx := float32(bytes_to_int32(b[12:15])) / 64.0
-	ty := float32(bytes_to_int32(b[15:18])) / 64.0
-	tz := float32(bytes_to_int32(b[18:21])) / 64.0
+	tx := float32(bytes_to_int32(b[11:14])) / 64.0 * 0.001
+	ty := float32(bytes_to_int32(b[17:20])) / 64.0 * 0.001
+	tz := float32(bytes_to_int32(b[14:17])) / 64.0 * 0.001
 	zoom := bytes_to_int32(b[20:23])
 	focus := bytes_to_int32(b[23:26])
 
